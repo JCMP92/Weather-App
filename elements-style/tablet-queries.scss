@@ -1,0 +1,37 @@
+@use './mixins.scss';
+
+.main-content {
+  h1 {
+    @include mixins.tablet {
+      font-size: 3rem;
+    }
+  }
+  h2 {
+    @include mixins.tablet {
+      font-size: 2.5rem;
+    }
+  }
+  h3 {
+    @include mixins.tablet {
+      font-size: 2rem;
+    }
+  }
+  .information-extra {
+    @include mixins.tablet {
+      font-size: 1.5rem;
+    }
+  }
+}
+.location-search {
+  @include mixins.tablet {
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 30rem;
+  }
+}
+#location {
+  @include mixins.tablet {
+    font-size: 1.5rem;
+    height: 3rem;
+  }
+}
