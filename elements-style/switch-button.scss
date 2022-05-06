@@ -21,6 +21,9 @@
     transform: translateX(26px);
   }
 }
+.switch:focus {
+  outline: none;
+}
 .slider {
   display: flex;
   align-items: center;

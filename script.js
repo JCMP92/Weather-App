@@ -15,7 +15,7 @@ async function getWeather(location) {
     displayData(desiredLocationData);
     resetInput();
   } catch (err) {
-    alert(err);
+    alert('Sorry, that´s not a valid location');
   }
 }
 

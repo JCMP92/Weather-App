@@ -36,6 +36,9 @@
     color: white;
     padding-left: 1rem;
   }
+  button:focus {
+    outline-style: none;
+  }
 }
 #location {
   height: 2.5rem;
