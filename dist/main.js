@@ -66,7 +66,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _code_weatherFetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./code/weatherFetch */ \"./src/code/weatherFetch.js\");\n/* harmony import */ var _code_newSearch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./code/newSearch */ \"./src/code/newSearch.js\");\n\r\n\r\n\r\n(0,_code_weatherFetch__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('PUEBLA');\r\n// rdyToSearch();\r\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _code_weatherFetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./code/weatherFetch */ \"./src/code/weatherFetch.js\");\n/* harmony import */ var _code_newSearch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./code/newSearch */ \"./src/code/newSearch.js\");\n\r\n\r\n\r\n(0,_code_weatherFetch__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('PUEBLA');\r\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ })
 
