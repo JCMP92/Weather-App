@@ -1,25 +1,4 @@
-async function getWeather(location) {
-  try {
-    const response = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=217f668dd0994a86a21160307220305&q=${location}`,
-      {
-        mode: 'cors',
-      }
-    );
-    const weatherData = await response.json();
-
-    console.log(weatherData);
-    console.log(processData(weatherData));
-    const desiredLocationData = processData(weatherData);
-    resetBtn();
-    displayData(desiredLocationData);
-    resetInput();
-  } catch (err) {
-    alert('Sorry, that´s not a valid location');
-  }
-}
-
-getWeather('PUEBLA');
+import { buttonEvents } from './buttons';
 
 const processData = (weatherData) => {
   const locationTime = weatherData.location.localtime.split(' ');
@@ -64,39 +43,4 @@ const displayData = (desiredLocationData) => {
   buttonEvents(desiredLocationData);
 };
 
-const buttonEvents = (desiredLocationData) => {
-  const tempBtn = document.getElementById('temp-btn');
-  const temperature = document.getElementById('temperature-text');
-  const feels = document.getElementById('feel-txt');
-
-  tempBtn.addEventListener('change', function (e) {
-    if (tempBtn.checked) {
-      temperature.textContent = desiredLocationData.temperatureF + '°F';
-      feels.textContent = desiredLocationData.fellsLikeF + '°F';
-    } else {
-      temperature.textContent = desiredLocationData.temperatureC + '°C';
-      feels.textContent = desiredLocationData.fellsLikeC + '°C';
-    }
-  });
-};
-
-const searchInput = document.querySelector('input');
-const searchBtn = document.getElementById('search-btn');
-searchInput.addEventListener('keypress', function (e) {
-  if (e.key === 'Enter') {
-    getWeather(searchInput.value);
-  }
-});
-searchBtn.addEventListener('click', function (e) {
-  getWeather(searchInput.value);
-});
-
-const resetInput = () => {
-  const searchInput = document.getElementById('location');
-  searchInput.value = '';
-};
-
-const resetBtn = () => {
-  const tempBtn = document.getElementById('temp-btn');
-  tempBtn.checked = false;
-};
+export { processData, displayData };
