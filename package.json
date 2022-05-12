@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/JCMP92/Weather-App#readme",
   "devDependencies": {
+    "eslint": "^8.15.0",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2"
   }
