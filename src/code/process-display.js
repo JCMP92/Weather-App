@@ -27,19 +27,17 @@ const displayData = (desiredLocationData) => {
   const feels = document.getElementById('feel-txt');
   const precip = document.getElementById('precip-txt');
   const humidity = document.getElementById('humty-txt');
-  locationName.textContent =
-    desiredLocationData.locationName +
-    ' ' +
-    '/' +
-    ' ' +
-    desiredLocationData.country;
+  locationName.textContent = // eslint-disable-line operator-linebreak
+    `${desiredLocationData.locationName} ` + // eslint-disable-line operator-linebreak
+    `/` + // eslint-disable-line operator-linebreak
+    ` ${desiredLocationData.country}`;
   localTime.textContent = desiredLocationData.localTime;
   imageCont.src = desiredLocationData.conditionIcon;
   conditionText.textContent = desiredLocationData.conditionText;
-  temperature.textContent = desiredLocationData.temperatureC + '°C';
-  feels.textContent = desiredLocationData.fellsLikeC + '°C';
-  precip.textContent = desiredLocationData.precipMM + 'mm';
-  humidity.textContent = desiredLocationData.humidity + '%';
+  temperature.textContent = `${desiredLocationData.temperatureC}°C`;
+  feels.textContent = `${desiredLocationData.fellsLikeC}°C`;
+  precip.textContent = `${desiredLocationData.precipMM}mm`;
+  humidity.textContent = `${desiredLocationData.humidity}%`;
   buttonEvents(desiredLocationData);
 };
 

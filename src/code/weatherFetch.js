@@ -8,7 +8,7 @@ export default async function getWeather(location) {
       `http://api.weatherapi.com/v1/forecast.json?key=217f668dd0994a86a21160307220305&q=${location}`,
       {
         mode: 'cors',
-      }
+      } // eslint-disable-line comma-dangle
     );
     const weatherData = await response.json();
     const desiredLocationData = processData(weatherData);
@@ -16,6 +16,6 @@ export default async function getWeather(location) {
     displayData(desiredLocationData);
     resetInput();
   } catch (err) {
-    alert('Sorry, that´s not a valid location');
+    alert('Sorry, that´s not a valid location'); // eslint-disable-line no-alert
   }
 }
